@@ -3,27 +3,3 @@ node_modules/
 
 # dotenv environment variables
 .env
-
-# logs
-npm-debug.log*
-pnpm-debug.log*
-
-# runtime data
-npm-debug.log*
-pnpm-debug.log*
-
-# optional npm cache directory
-.npm
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDEs and editors
-.vscode/
-.idea/
-
-# misc
-coverage/
-logs/
-*.log
