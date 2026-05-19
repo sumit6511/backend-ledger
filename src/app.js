@@ -14,7 +14,7 @@ const accountRouter = require("./routes/account.routes");
 const transactionRouter = require("./routes/transaction.routes");
 
 app.get("/", (req, res) => {
-  res.json({ msg: "The Ledger Service is up and running!" });
+  res.send("The Ledger Service is up and running!");
 });
 
 /*
