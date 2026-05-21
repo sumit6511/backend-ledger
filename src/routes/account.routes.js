@@ -1,19 +1,20 @@
-const express = require('express');
-const authMiddleware = require('../middlewares/auth.middleware');
-const accountController = require('../controllers/account.controller');
-
+const express = require("express");
+const authMiddleware = require("../middlewares/auth.middleware");
+const accountController = require("../controllers/account.controller");
 
 const router = express.Router();
 
-
 /*
-* POST /api/accounts/create
-* - Creates a new account
-* - Requires authentication
-*/
+ * POST /api/accounts/create
+ * - Creates a new account
+ * - Requires authentication
+ */
 
-router.post('/create', authMiddleware.verifyToken, accountController.createAccount);
-
+router.post(
+  "/create",
+  authMiddleware.verifyToken,
+  accountController.createAccount,
+);
 
 /**
  * - GET /api/accounts/
@@ -22,9 +23,7 @@ router.post('/create', authMiddleware.verifyToken, accountController.createAccou
  * - Only accessible by the account owner
  */
 
-router.get('/', authMiddleware.verifyToken, accountController.getUserAccounts);
-
-
+router.get("/", authMiddleware.verifyToken, accountController.getUserAccounts);
 
 /**
  * - GET /api/accounts/balance/:accountId
@@ -33,8 +32,10 @@ router.get('/', authMiddleware.verifyToken, accountController.getUserAccounts);
  * - Only accessible by the account owner
  */
 
-router.get('/balance/:accountId', authMiddleware.verifyToken, accountController.getAccountBalance);
-
-
+router.get(
+  "/balance/:accountId",
+  authMiddleware.verifyToken,
+  accountController.getAccountBalance,
+);
 
 module.exports = router;
