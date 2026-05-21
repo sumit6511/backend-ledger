@@ -66,13 +66,13 @@ backend-ledger/
    ```
 
 3. **Environment Variables:**
-   Create a `.env` file in the root directory and configure the following variables:
+   Copy the provided `.env.example` file to create your `.env` file:
 
-   ```env
-   PORT=3000
-   MONGO_URI=<Your MongoDB Connection String (Must support replica sets for sessions/transactions)>
-   JWT_SECRET_KEY=<Your JWT Secret>
+   ```bash
+   cp .env.example .env
    ```
+
+   _Note: Open the newly created `.env` file and follow the detailed instructions inside to fill in your MongoDB URI, JWT secret, and email OAuth2 configuration._
 
 4. **Start the Application:**
    - **Development Mode** (with Nodemon):
